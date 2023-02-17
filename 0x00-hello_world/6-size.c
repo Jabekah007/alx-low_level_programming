@@ -12,10 +12,10 @@ float float_num;
 long long_num;
 long long int long_int;
 
-printf("Size of a char: %lu byte(s)", (unsigned long)sizeof(charater));
+printf("Size of a char: %lu byte(s)", (unsigned long)sizeof(character));
 printf("Size of an int: %lu byte(s)", (unsigned long)sizeof(age));
 printf("Size of an long: %lu byte(s)", (unsigned long)sizeof(long_num));
 printf("Size of an long long int: %lu byte(s)", (unsigned long)sizeof(long_int));
 printf("Size of a float: %lu byte(s)", (unsigned long)sizeof(float_num));
-return (0)
+return (0);
 }
