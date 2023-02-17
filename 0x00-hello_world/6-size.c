@@ -14,8 +14,8 @@ long long int long_int;
 
 printf("Size of a char: %lu byte(s)", (unsigned long)sizeof(character));
 printf("\nSize of an int: %lu byte(s)", (unsigned long)sizeof(age));
-printf("\nSize of an long: %lu byte(s)", (unsigned long)sizeof(long_num));
-printf("\nSize of an long long int: %lu byte(s)", (unsigned long)sizeof(long_int));
+printf("\nSize of a long: %lu byte(s)", (unsigned long)sizeof(long_num));
+printf("\nSize of a long long int: %lu byte(s)", (unsigned long)sizeof(long_int));
 printf("\nSize of a float: %lu byte(s)", (unsigned long)sizeof(float_num));
 return (0);
 }
