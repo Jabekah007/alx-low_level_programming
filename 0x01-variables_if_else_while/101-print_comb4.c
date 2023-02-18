@@ -13,7 +13,7 @@ int main(void)
 
 	for (Hundred = '0'; Hundred <= '9'; Hundred++) /*hundreds place*/
 	{
-		for (ten = (Hundred + 1); Ten <= '9'; Ten++) /*tens=100s+1*/
+		for (Ten = (Hundred + 1); Ten <= '9'; Ten++) /*tens=100s+1*/
 		{
 			for (One = (Ten + 1); One <= '9'; One++) /*ones*/
 			{
