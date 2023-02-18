@@ -7,19 +7,19 @@
 
 int main(void)
 {
-	char lower = 'a';
-	char upper = 'A';
+	char lower_case = 'a';
+	char upper_case = 'A';
 
-	while (lower <= 'z') /*print lowercases a-z*/
+	while (lower_case <= 'z') /*print lowercases a-z*/
 	{
-		putchar(lower);
-		lower++;
+		putchar(lower_case);
+		lower_case++;
 	}
 
-	while (upper <= 'Z') /*print uppercase A-Z*/
+	while (upper_case <= 'Z') /*print uppercase A-Z*/
 	{
-		putchar(upper);
-		upper++;
+		putchar(upper_case);
+		upper_case++;
 	}
 
 	putchar('\n');
