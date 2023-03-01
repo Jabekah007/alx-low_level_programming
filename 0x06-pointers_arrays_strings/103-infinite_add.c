@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main(){
+int main(void){
 int add_numbers(int a, int b) {
     return a + b;
 
