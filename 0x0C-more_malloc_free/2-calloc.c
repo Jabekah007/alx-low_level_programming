@@ -2,44 +2,28 @@
 #include "main.h"
 
 /**
- * _realloc - allocate memory and set all values to 0
- * @ptr: pointer to the memory previously allocated (malloc(old_size))
- * @old_size: size previously allocated
- * @new_size: new size to reallocate
- * Return: pointer to reallocated memory
+ * _calloc - allocate memory and set all values to 0
+ * @nmemb: size
+ * @size: sizeof(datatype)
+ * Return: pointer to calloc'd string
  */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *p;
-	unsigned int i;
+	void *ptr;
+	unsigned int i; /* match unsigned arguments */
 
-	if (new_size == 0 && ptr != NULL) /* free memory if reallocate 0 */
-	{
-		free(ptr);
-		return (NULL);
-	}
-
-	if (new_size == old_size) /* return ptr if reallocating same old size */
-		return (ptr);
-
-	if (ptr == NULL) /* malloc new size if ptr is originally null */
-	{
-		p = malloc(new_size);
-		if (p == NULL)
-			return (NULL);
-		else
-			return (p);
-	}
-
-	p = malloc(new_size); /* malloc and check error */
-	if (p == NULL)
+	if (nmemb <= 0 || size <= 0) /* validate input */
 		return (NULL);
 
-	/* fill up values up till minimum of old or new size */
-	for (i = 0; i < old_size && i < new_size; i++)
-		*((char *)p + i) = *((char *)ptr + i);
-	free(ptr); /* free old ptr */
+	/* allocate memory and check if error */
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
 
-	return (p);
+	/* set allocated memory values to 0 */
+	for (i = 0; i < nmemb * size; i++)
+		*((char *)ptr + i) = 0; /* type cast assigning values*/
+
+	return (ptr);
 }
