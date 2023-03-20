@@ -1,1 +1,1 @@
-low level program
+stuctures ad typedef in c
