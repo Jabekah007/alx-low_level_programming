@@ -1,19 +1,19 @@
 #include "lists.h"
 /**
- * get_nodeint_at_index - Returns the node at an index
- * @head: Pointer to the first element of the list
- * @index: Desired node at this position
- * Return: Pointer to the desired node
+ * pop_listint - Deletes the first element of a list
+ * @head: pointer to the first node of the list
+ * Return: The number inside the node that is deleted
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int pop_listint(listint_t **head)
 {
-	unsigned int c;
+	int n;
+	listint_t *tmp;
 
-	for (c = 0; c < index ; c++)
-	{
-		if (head == NULL)
-			return (NULL);
-		head = head->next;
-	}
-	return (head);
+	if (head == NULL || *head == NULL)
+		return (0);
+	n = (*head)->n;
+	tmp = *head;
+	*head = (*head)->next;
+	free(tmp);
+	return (n);
 }
